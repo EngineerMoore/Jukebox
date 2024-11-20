@@ -27,7 +27,7 @@ model Playlist {
   owner   User @relation( fields: [ownerId], references: [id])
   ownerId Int
 
-  track Track[]
+  tracks Track[]
 }
 
 model Track {
