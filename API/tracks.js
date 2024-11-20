@@ -3,10 +3,15 @@ const express = require(`express`);
 const router = express.Router();
 module.exports = router
 
-router.get("/", (req, res, next) => {
-  
+router.get("/", async (req, res, next) => {
+  try {
+    const tracks = await prisma.user.findMany();
+    res.json(tracks);
+  }catch(e){
+    next(e);
+  }
 })
 
-router.get("/:id", (req, res, next) => {
+router.get("/:id", async (req, res, next) => {
   
 })
