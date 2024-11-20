@@ -6,3 +6,13 @@ GET {{host}}/
 
 ###
 GET {{host}}/users
+
+###
+GET {{host}}/users/1
+
+
+###
+GET {{host}}/playlists/1
+
+###
+GET {{host}}/tracks/5
