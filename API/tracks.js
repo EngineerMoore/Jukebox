@@ -5,7 +5,7 @@ module.exports = router
 
 router.get("/", async (req, res, next) => {
   try {
-    const tracks = await prisma.user.findMany();
+    const tracks = await prisma.track.findMany();
     res.json(tracks);
   }catch(e){
     next(e);

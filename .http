@@ -16,3 +16,27 @@ GET {{host}}/playlists/1
 
 ###
 GET {{host}}/tracks/5
+
+###
+POST {{host}}/playlists
+Content-Type: application/json
+
+{
+  "name": "Billy Jean's Greatest Hits",
+  "description": "The greatest of the greates hits",
+  "ownerId": 1,
+  "trackIds": [5,6,3,19]
+}
+
+### Bad Request
+GET {{host}}/1
+
+### Bad Request
+POST {{host}}/playlists
+Content-Type: application/json
+
+{
+  "name": "Billy Jean's Greatest Hits",
+  "description": "The greatest of the greates hits",
+  "trackIds": [5,6,3,19]
+}
