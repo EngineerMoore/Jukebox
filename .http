@@ -1,0 +1,8 @@
+@PORT = 3000
+@host = http://localhost:{{PORT}}
+
+###
+GET {{host}}/
+
+###
+GET {{host}}/users
