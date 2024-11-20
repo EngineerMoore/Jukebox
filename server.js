@@ -10,6 +10,10 @@ app.get("/", (req, res, next) => {
   res.send(`Welcome to the Jukebox API`)
 })
 
+app.use("/users", require(`./API/Users`))
+app.use("/playlists", require(`./API/Playlists`))
+app.use("/tracks", require(`./API/tracks`))
+
 app.use((req, res, next) => {
   next({ status: 404, message: `Endpoint not found`})
 })
